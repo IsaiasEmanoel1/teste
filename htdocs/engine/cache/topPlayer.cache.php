@@ -1,1 +1,1 @@
-[{"name":"Lorddd D1095","level":"98","experience":"15143482"},{"name":"Pepsi","level":"38","experience":"787732"},{"name":"Piroba","level":"22","experience":"153325"},{"name":"Primeiro Char","level":"21","experience":"120450"},{"name":"Aaaaaaaaaa","level":"20","experience":"98800"}]
+[{"name":"Pepsi","level":"38","experience":"787732"},{"name":"Piroba","level":"22","experience":"153325"},{"name":"Primeiro Char","level":"21","experience":"120450"},{"name":"Biribinha","level":"20","experience":"98800"},{"name":"Biriba","level":"10","experience":"9300"}]

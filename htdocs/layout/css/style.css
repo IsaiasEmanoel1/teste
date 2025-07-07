@@ -10,7 +10,7 @@
 
 	/* Links / anchors */
 	--anchor:#629fb3;
-	--anchor-hover:#24a9e7;
+	--anchor-hover:#BE00FF;
 
 	/* buttons or alert boxes with different colors */
 	--bg-danger: #3c0e0e;
@@ -86,7 +86,7 @@ td { padding: 10px 5px; }
 .centralizeContent { text-align: center; }
 .smedia { font-size: 2em; }
 
-.banner {
+/* .banner {
 	display: block;
     background: url("../img/header.png");
     height: 220px;
@@ -95,7 +95,7 @@ td { padding: 10px 5px; }
     margin-top: 30px;
 	border: 3px solid var(--primary); 
 	border-radius: 10px;
-}
+} */
 
 nav {
 	border-radius: 10px;

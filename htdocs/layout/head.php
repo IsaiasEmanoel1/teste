@@ -1,6 +1,6 @@
 <head>
   <title><?php echo $config['site_title']; ?></title>
-  <meta name="description" content="ArcansOrigins - Sua diversão começa aqui!" />
+  <meta name="description" content="ARZAOT - Sua diversão começa aqui!" />
   <meta name="keywords" content="poketibia, pokemon, pokemonhp, pxg, pokexgames" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="layout/css/style.css" />

@@ -15,7 +15,7 @@
 					</ul>
 				</li>
 
-				<li><a href="https://discord.gg/dypmj6uee7"><i class="fa fa-info-circle"></i> Discord</a>
+				<li><a href="https://discord.gg/8y7QDm9sq2"><i class="fa fa-info-circle"></i> Discord</a>
 
 			</ul>
 		</div>
