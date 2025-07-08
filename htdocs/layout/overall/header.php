@@ -49,8 +49,6 @@
 		<div class="main">
 			<?php include 'layout/menu.php'; ?>
 
-			<div class="well banner"></div>
-
 			<div class="well feedContainer preventCollapse">
 				<?php if ($delay_hide > 0): ?>
 					<div class="well topPane preventCollapse">
@@ -63,10 +61,10 @@
 				<!-- TESTE -->
 		<div class="well topPane preventCollapse">
 					
-					<div style="float: right; width: 53px;"><a href="https://discord.gg/heNXEAmfZp" target="_blank"><img src="layout/img/discordico.png" width="100%"></a></div>
+					<!-- <div style="float: right; width: 53px;"><a href="https://discord.gg/heNXEAmfZp" target="_blank"><img src="layout/img/discordico.png" width="100%"></a></div>
 					<div style="float: right; width: 53px;"><a href="https://discord.gg/heNXEAmfZp" target="_blank"><img src="layout/img/instaico.png" width="100%"></a></div>
 					<div style="float: right; width: 53px;"><a href="https://discord.gg/heNXEAmfZp" target="_blank"><img src="layout/img/facebookico.png" width="100%"></a></div>
 					
 											<div style="float: right; width: 53px; margin-right: 80px; margin-top: 12px;"><a href="downloads.php" class="topDownloadButton"> Download </a></div>
-									</div>
+									</div> -->
 				<div class="pull-left leftPane">

@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Luckiest Guy', cursive; }
     margin: 0 2px;
     text-decoration: none;
     font-family: 'Luckiest Guy', cursive;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s ease; /* Adiciona 'transform' à transição */
 	
@@ -477,4 +477,24 @@ div.relative {
 .topDownloadButton:hover {
 	border-color: #629fb3;
 	color: #629fb3;
+}
+
+/* Estilo para o ícone do Discord no canto */
+.discord-corner-icon {
+    position: fixed; /* Mantém o ícone fixo na tela, mesmo com a rolagem */
+    bottom: 15px;       /* Distância do topo */
+    left: 15px;      /* Distância da esquerda */
+    z-index: 1000;   /* Garante que o ícone fique sobre outros elementos */
+}
+
+.discord-corner-icon img {
+    width: 70px;     /* Largura do ícone - ajuste se necessário */
+    height: auto;
+    opacity: 0.4;    /* Deixa o ícone quase invisível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.discord-corner-icon img:hover {
+    opacity: 1;      /* Deixa o ícone totalmente nítido */
 }

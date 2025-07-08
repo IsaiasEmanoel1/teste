@@ -11,7 +11,7 @@ if ($config['UseChangelogTicker']) {
 		<div class="well">
 			<table id="changelogTable">
 				<tr class="yellow">
-					<td colspan="2">Latest Changelog Updates (<a href="changelog.php">Click here to see full changelog</a>)</td>
+					<td colspan="2">Últimas atualizações do Changelog (<a href="changelog.php">Clique aqui para ver o changelog completo</a>)</td>
 				</tr>
 				<?php
 				for ($i = 0; $i < count($changelogs) && $i < 5; $i++) {
@@ -26,7 +26,7 @@ if ($config['UseChangelogTicker']) {
 			</table>
 		</div>
 		<?php
-	} else echo "ArcansOrigins 2023.";
+	} else echo "ARZAOT 2025.";
 }
 
 $cache = new Cache('engine/cache/news');
@@ -140,6 +140,6 @@ if ($news) {
 	}
 	
 } else {
-	echo '<p>No news exist.</p>';
+	echo '<p>Não existem novidades.</p>';
 }
 ?>

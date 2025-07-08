@@ -18,12 +18,10 @@
 				
 			</footer>
 		</div><!-- Main container END -->
+		<div class="discord-corner-icon">
+			<a href="https://discord.gg/8y7QDm9sq2" target="_blank">
+				<img src="layout/img/discordico.png" alt="Discord">
+			</a>
+		</div>
 	</body>
 </html>
-<!--
-	Layout author: Blackwolf (Snavy on otland)
-	Otland: https://otland.net/members/snavy.155163/
-	Facebook: http://www.facebook.com/idont.reallywolf.1
-	Twitter: @idontreallywolf
-	Converted to Znote AAC by: Znote
--->
