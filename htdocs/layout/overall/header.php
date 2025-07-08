@@ -9,6 +9,9 @@
 		<meta charset="utf-8">
 		<title><?php echo $config['site_title']; ?></title>
 
+
+		<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		
 		<!-- Stylesheet(s) -->
 		<link rel="stylesheet" href="layout/css/style.css">
 		<link rel="stylesheet" href="layout/fontawesome/css/font-awesome.min.css">

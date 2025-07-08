@@ -34,11 +34,80 @@
 	--border-default: #000;
 }
 
-body {
-	font-family: 'arial', sans-serif;
-	color:var(--font-color);
+/* 1. FONTES GERAIS */
+body { font-family: 'Poppins', sans-serif; color: #E0E0E0; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Luckiest Guy', cursive; }
+
+/* 2. BARRA DE NAVEGAÇÃO PRINCIPAL */
+#main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000000 !important;
+    border-bottom: 2px solid #222;
+    width: 100%;
+    /* Garante que o container se comporte corretamente */
+    overflow: hidden; 
 }
 
+/* 3. ALINHAMENTO DAS LISTAS (ESQUERDA E DIREITA) */
+#main-navbar .container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; /* Alinha verticalmente os botões e o logo */
+}
+
+/* Garante que os itens da lista fiquem lado a lado */
+#main-navbar .container ul li {
+    float: left; /* Técnica clássica para alinhar itens horizontalmente */
+}
+
+/* 4. ESTILO DOS BOTÕES (LINKS) */
+#main-navbar ul li a {
+    display: flex; /* Usamos flex para alinhar o ícone e o texto */
+    align-items: center;
+    height: 86px; /* Define uma altura fixa para todos os botões, igual ao logo */
+    padding: 0 20px;
+    margin: 0 2px;
+    text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona 'transform' à transição */
+	
+    
+    /* COR PADRÃO (INATIVO) */
+    color: #a0a0a0;
+}
+
+#main-navbar ul li a i {
+    margin-right: 8px; /* Adiciona uma margem de 8 pixels à direita do ícone */
+}
+
+/* EFEITO HOVER: Muda a cor do texto para branco */
+#main-navbar ul li a:hover {
+    color: #ffffff;
+	transform: scale(1.1); /* Aumenta o texto em 10% ao passar o mouse */
+}
+
+/* ESTILO PARA PÁGINA ATIVA: Texto fica branco */
+#main-navbar ul li a.active {
+    color: #ffffff;
+    cursor: default;
+	transform: scale(1.0); /* Evita o zoom no botão ativo ao passar o mouse */
+}
+
+/* AJUSTES FINAIS PARA O LOGO */
+#logo-link {
+    padding: 0 !important; /* Remove o padding horizontal do logo */
+    height: auto; /* Deixa a altura do logo ser controlada pelo vídeo */
+}
+/* Alinha o container da direita */
+#main-navbar .pull-right {
+    float: right;
+}
 
 body, ul { margin: 0; padding: 0; }
 li { list-style: none; }

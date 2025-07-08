@@ -1,30 +1,59 @@
-<nav>
-	<div class="container">
-		<!-- Menu left aligned -->
-		<div class="pull-left">
-			<ul>
-				<li><a href="/"><i class="fa fa-home"></i> Inicio</a>
-				</li>
-				<li><a href="medias.php"><i class="fa fa-info-circle"></i> Média de Catch</a></li>
-				<li><a href="downloads.php"><i class="fa fa-download"></i> Baixar</a></li>
-				<li><a id="accountLink" href="myaccount.php"><i class="fa fa-user-circle"></i> Conta</a>
-					<ul>
-						<li><a href="sub.php?page=recover">Perdeu sua conta?</a> </li>
-						<li><a href="myaccount.php">Minha conta</a> </li>
-						<li><a href="register.php">Registrar</a> </li>
-					</ul>
-				</li>
+<?php
+// Pega o nome do arquivo da página que está sendo visitada.
+$currentPage = basename($_SERVER['PHP_SELF']);
+?>
 
-				<li><a href="https://discord.gg/8y7QDm9sq2"><i class="fa fa-info-circle"></i> Discord</a>
+<nav id="main-navbar" style="border-color:black" >
+    <div class="container" style="background-color:black">
+        <div class="pull-left">
+            <ul>
+                <li>
+                    <a href="/" id="logo-link">
+                        <video src="layout/img/logo.mp4" autoplay loop muted playsinline style="height: 120px;"></video>
+                    </a>
+                </li>
 
-			</ul>
-		</div>
-		<!-- Menu right aligned -->
-		<div class="pull-right">
-			<ul>
-				<li><a href="sub.php?page=loginhelp" class="modIcon loginBtn"><i class="fa fa-lock"></i><i class="fa fa-unlock"></i> Login</a> </li>
-				<li><a href="register.php"><i class="fa fa-key"></i> Registrar</a> </li>
-			</ul>
-		</div>
-	</div>
+                <li>
+                    <a href="index.php" class="<?php if ($currentPage == 'index.php' || $currentPage == '') echo 'active'; ?>">
+                        <i class="fa fa-home"></i> Início
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="downloads.php" class="<?php if ($currentPage == 'downloads.php') echo 'active'; ?>">
+                        <i class="fa fa-download"></i> Download
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="shop.php" class="<?php if ($currentPage == 'shop.php') echo 'active'; ?>">
+                        <i class="fa fa-shopping-cart"></i> Shop
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="medias.php" class="<?php if ($currentPage == 'medias.php') echo 'active'; ?>">
+                        <i class="fa fa-info-circle"></i> Média de Catch
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pull-right">
+            <ul>
+                <li>
+                    <a href="sub.php?page=loginhelp" class="modIcon loginBtn <?php if ($currentPage == 'sub.php') echo 'active'; ?>">
+                        <i class="fa fa-lock"></i><i class="fa fa-unlock"></i> Login
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="register.php" class="<?php if ($currentPage == 'register.php') echo 'active'; ?>">
+                        <i class="fa fa-key"></i> Registrar
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
