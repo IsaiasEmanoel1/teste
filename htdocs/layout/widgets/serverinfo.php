@@ -1,6 +1,6 @@
 <div class="well widget">
-	<div class="header">
-		Status Servidor
+	<div class="widget_header">
+		<h3 class="widget_title">Status Servidor </h3>
 	</div>
 	<div class="body">
 		<ul>

@@ -1,27 +1,26 @@
-<div class="well widget">
-	<div class="header">
-		Top 5 players
-	</div>
-	<div class="body">
-		<table>
-			<?php
-			$cache = new Cache('engine/cache/topPlayer');
-			if ($cache->hasExpired()) {
-				$players = mysql_select_multi('SELECT `name`, `level`, `experience` FROM `players` WHERE `group_id` < ' . $config['highscore']['ignoreGroupId'] . ' ORDER BY `level` DESC, `experience` DESC LIMIT 5;');
-				
-				$cache->setContent($players);
-				$cache->save();
-			} else {
-				$players = $cache->load();
-			}
+<div class="widget">
+    <div class="widget_header">
+        <h3 class="widget_title">Top 5 Players</h3>
+    </div>
+    <div class="widget_body">
+        <?php
+        // Busca no banco de dados os 5 jogadores com maior nível
+        $top_players = mysql_select_multi('SELECT `name`, `level`, `experience` FROM `players` WHERE `group_id` < ' . $config['highscore']['ignoreGroupId'] . ' ORDER BY `level` DESC, `experience` DESC LIMIT 5;');
 
-			if ($players) {
-				foreach($players as $count => $player) {
-					$nr = $count+1;
-					echo "<tr><td>{$nr}</td><td><a href='characterprofile.php?name={$player['name']}'>{$player['name']}</a> ({$player['level']}).</td></tr>";
-				}
-			}
-			?>
-		</table>
-	</div>
+        if ($top_players) {
+            echo '<ul>';
+            foreach ($top_players as $player) {
+                // Previne ataques XSS usando htmlspecialchars
+                $playerName = htmlspecialchars($player['name']);
+                $playerLevel = (int)$player['level'];
+                
+                // Exibe cada jogador na lista
+                echo '<li><a href="characterprofile.php?name=' . urlencode($playerName) . '">' . $playerName . '</a> <span>Level ' . $playerLevel . '</span></li>';
+            }
+            echo '</ul>';
+        } else {
+            echo '<p>Nenhum jogador no ranking no momento.</p>';
+        }
+        ?>
+    </div>
 </div>

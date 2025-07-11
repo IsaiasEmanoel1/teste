@@ -1,19 +1,31 @@
-<!-- Tell the user to use the aside menu -->
-<h1 class="toright">Login</h1>
-<p class="toright">Please fill the login form in this aside bar to login. &rarr;</p>
-<style type="text/css">
-	/* Align the text to the right of the page. */
-	.toright {
-		text-align: right;
-	}
-	div.leftPane {
-		box-sizing: border-box;
-		padding-right: 30px;
-	}
-</style>
-<script type="text/javascript">
-	// Auto focus to login username box
-	$(function() {
-		$('#login_username').focus();
-	});
-</script>
+<div class="well loginContainer widget" id="loginContainer">
+	<div class="header" style="font-family:'Luckiest Guy'">
+		Login / Registrar
+	</div>
+	<div class="body">
+		<form class="loginForm" action="login.php" method="post">
+			<div class="well">
+				<label for="login_username">Usuario:</label> <input type="text" name="username" id="login_username">
+			</div>
+			<div class="well">
+				<label for="login_password">Senha:</label> <input type="password" name="password" id="login_password">
+			</div>
+			<?php if ($config['twoFactorAuthenticator']): ?>
+				<div class="well">
+					<label for="login_password">Token:</label> <input type="password" name="authcode">
+				</div>
+			<?php endif; ?>
+			<div class="well">
+				<input type="submit" value="Log in" class="submitButton">
+			</div>
+			<?php
+				/* Form file */
+				Token::create();
+			?>
+			<center>
+				<h3><a href="register.php">Nova conta</a></h3>
+				<p>Esqueceu o<a href="recovery.php?mode=username"> Usuario</a> ou a <a href="recovery.php?mode=password">senha</a>?</p>
+			</center>
+		</form>
+	</div>
+</div>

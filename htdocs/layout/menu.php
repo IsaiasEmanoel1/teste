@@ -3,7 +3,7 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
-<nav id="main-navbar" style="border-color:black" >
+<nav id="main-navbar" style="border: 2px solid rgba(255, 255, 255, 0.54);" >
     <div class="container" style="background-color:black">
         <div class="pull-left">
             <ul>
