@@ -11,6 +11,8 @@
 
 
 		<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		
 		<!-- Stylesheet(s) -->
 		<link rel="stylesheet" href="layout/css/style.css">
@@ -49,7 +51,7 @@
 		<div class="main">
 			<?php include 'layout/menu.php'; ?>
 
-			<div class="well feedContainer preventCollapse">
+			<div class="well feedContainer preventCollapse" style="border: 1px solid rgba(255, 255, 255, 0.54);">
 				<?php if ($delay_hide > 0): ?>
 					<div class="well topPane preventCollapse">
 						<div class="well pull-left">

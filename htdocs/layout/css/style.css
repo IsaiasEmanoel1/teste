@@ -618,52 +618,105 @@ div.relative {
 .widget_body li a:hover { text-decoration: underline; }
 .widget_body li span { color: #dcdcdc; font-size: 14px; }
 
-/* ============================
-   ESTILO DA PÁGINA DE LOGIN
-   ============================ */
+/* Customização da Página de Login - Corrigido e Centralizado */
 
-.login-page-container {
-    max-width: 500px; /* Define a largura máxima do bloco de login */
-    margin: 50px auto; /* Centraliza na página com uma margem no topo e embaixo */
+/* Título "Login / Registrar" */
+#loginContainer .header {
+    font-size: 28px !important;
+    font-family: 'Luckiest Guy', cursive !important;
+    color: white !important;
+    text-align: left !important;
 }
 
-/* O estilo que já criamos para a classe .widget será automaticamente aplicado aqui. */
-
-/* Estilos para a caixa de erros de login */
-.login-errors {
-    background-color: #5d2828;
-    border: 1px solid #a14444;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 20px;
-    color: #ffffff;
+/* Widget de Login */
+#loginContainer {
+    max-width: 600px !important; /* Reduzi um pouco para um visual mais compacto */
+    margin: 40px auto !important; /* Centraliza o widget na página (vertical e horizontal) */
 }
 
-.login-errors ul {
-    margin: 0;
-    padding: 0 0 0 18px; /* Adiciona um padding só para a bolinha da lista */
-    list-style-position: inside;
+/* Rótulos (Usuario, Senha) */
+#loginContainer .body label {
+    font-family: 'Poppins', sans-serif !important;
+    color: #ffffff !important; /* Cor cinza solicitada */
+	font-weight: 550;
 }
 
-.login-errors li {
-    padding: 2px 0;
-    border: none;
-    display: list-item; /* Garante que a bolinha apareça */
+/* Links (Nova conta, esqueceu usuário/senha) */
+#loginContainer .body h3 > a {
+    font-family: 'Poppins', sans-serif !important;
+    color: #cccbcb !important; /* Cor cinza solicitada */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: inline-block; /* Necessário para a transformação funcionar corretamente */
 }
 
-/* Links abaixo do formulário (Criar conta, etc) */
-.login-links {
+/* Efeito Hover para os links */
+#loginContainer .body a:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    color: #f0f0f0 !important; /* Um tom de branco um pouco mais brilhante */
+}
+
+#loginContainer .body p > a:hover {
+    color: #f0f0f0 !important; /* Apenas muda a cor para branco */
+}
+
+#loginContainer .body p > a {
+    font-weight: bold;
+	color: #e0dedf;
+}
+
+/* --- Estilo para a Caixa de Erro --- */
+.login-error-container {
+    background-color: #d14848; /* Vermelho para erro */
+    color: white;
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     text-align: center;
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border-left: 3px solid #c91a1a;
 }
 
-.login-links a {
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 14px;
-    margin: 0 10px;
+/* Campos de input (usuário e senha) */
+#loginContainer input[type="text"],
+#loginContainer input[type="password"],
+#loginContainer input[type="authcode"] {
+	background-color: #1e1e1e;
+    border: 1px solid #505050;
+	border-radius: 5px;
+	padding: 14px;
+	color: #ffffff;
+	font-size: 15px; /* <-- AUMENTEI A FONTE */
+    width: 92%;
+	font-family: 'Poppins', sans-serif;
+    height: 40px; /* Altura de 40px para os campos */
+    box-sizing: border-box;
 }
 
-.login-links a:hover {
-    text-decoration: underline;
+
+/* Container do botão de login */
+#loginContainer .well:has(> .submitButton) {
+    text-align: center; /* Centraliza o botão dentro da sua div */
+}
+
+/* Botão de Login */
+#loginContainer .submitButton {
+    background-color: #3e3e3e;
+    color: #ffffff;
+    border: 1px solid #606060;
+    border-radius: 30px;
+    padding: 10px 30px; /* Ajuste do padding para um botão mais proporcional */
+	width: 55%;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.2s;
+	height: 40px;
+}
+
+#loginContainer .submitButton:hover {
+    background-color: #4f4f4f;
+    border-color: #808080;
 }

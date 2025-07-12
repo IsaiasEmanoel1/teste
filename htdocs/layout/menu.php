@@ -42,17 +42,23 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <div class="pull-right">
             <ul>
-                <li>
-                    <a href="sub.php?page=loginhelp" class="modIcon loginBtn <?php if ($currentPage == 'sub.php') echo 'active'; ?>">
-                        <i class="fa fa-lock"></i><i class="fa fa-unlock"></i> Login
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="register.php" class="<?php if ($currentPage == 'register.php') echo 'active'; ?>">
-                        <i class="fa fa-key"></i> Registrar
-                    </a>
-                </li>
+                <?php if (user_logged_in()): ?>
+                     <li><a href="myaccount.php"><i class="fas fa-user"></i> Minha Conta</a></li>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <?php else: ?>
+                    <li>
+                        <a href="sub.php?page=loginhelp" class="modIcon loginBtn <?php if ($currentPage == 'sub.php') echo 'active'; ?>">
+                            <i class="fa fa-lock"></i><i class="fa fa-unlock"></i> Login
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="register.php" class="<?php if ($currentPage == 'register.php') echo 'active'; ?>">
+                            <i class="fa fa-key"></i> Registrar
+                        </a>
+                    </li>
+                <?php endif; ?>
+
             </ul>
         </div>
     </div>

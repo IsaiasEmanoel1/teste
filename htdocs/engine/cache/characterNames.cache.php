@@ -1,1 +1,1 @@
-["Biriba","Biribinha","ELLL CHACO","mixlort","Pepsi","Piroba","Primeiro Char"]
+["Biriba","Biribinha","Biroba","ELLL CHACO","mixlort","Pepsi","Piroba","Primeiro Char"]
